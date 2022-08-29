@@ -58,7 +58,7 @@ jobs:
             # mandatory
             -Dsonar.projectKey=Th3Nathan_template-node
             -Dsonar.organization=th3nathan
-            -Dsonar.sources=src
+            -Dsonar.sources=../../src
             -Dsonar.javascript.coveragePlugin=lcov
             -Dsonar.links.scm=https://github.com/Th3Nathan/template-node
             # When you need the analysis to take place in a directory other than the one from which it was launched
