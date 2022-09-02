@@ -1,12 +1,12 @@
 #!/bin/bash
 repositoryName=$1
-gh repo create $repositoryName --template "https://github.com/Th3Nathan/template-node" --public
+gh repo create templatenathan/$repositoryName --template "https://github.com/templatenathan/template" --public
 
 while [ ! -f $repositoryName/package.json ]
 do
   rm -rf $repositoryName
   sleep 0.1
-  gh repo clone github.com/Th3Nathan/$repositoryName
+  gh repo clone github.com/templatenathan/$repositoryName
 done
 
 cd $repositoryName
