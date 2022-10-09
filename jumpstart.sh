@@ -16,4 +16,5 @@ git add .
 git commit -m "chore: change 'template' to '$repositoryName' in package json"
 git push
 echo "finished setting up the repo: $repositoryName"
+git checkout -b dev
 code .
