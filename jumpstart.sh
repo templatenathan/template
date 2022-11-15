@@ -12,6 +12,7 @@ done
 cd $repositoryName
 sed -i '' -e "s/\"name\": \"template\"/\"name\": \"$repositoryName\"/g" "package.json"
 sed -i '' -e "s/templatenathan_template/$repositoryName/g" ".github/workflows/sonarcloud.yml"
+sed -i '' -e "s/\"template\"/\"$repositoryName\"/g" "main.tf"
 npm i
 git add .
 git commit -m "chore: change 'template' to '$repositoryName' in package json"
