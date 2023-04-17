@@ -16,6 +16,9 @@ sed -i '' -e "s/\"template\"/\"$repositoryName\"/g" "main.tf"
 npm i
 git add .
 git commit -m "chore: change 'template' to '$repositoryName' in package json"
+sfdx force:project:create -n $repositoryName
+git add .
+git commit -m "chore: initialize salesforce project"
 git push
 echo "finished setting up the repo: $repositoryName"
 code .
